@@ -11,15 +11,18 @@
             
     
         <script>
-            
-            function Caneta(preco, cor)
-            {
-                var color = cor || 'black';
+            var Caneta = (function(window){
+                'use strict';
+                console.log(this);
                 
-                this.preco = preco || 1;
-                
-                this.mudarCor = function(cor)
+                function _caneta(preco, cor)
                 {
+                    var color = cor || 'black';
+                
+                    this.preco = preco || 1;
+                
+                    this.mudarCor = function(cor)
+                    {
                     if(cor != 'red' && cor != 'black')
                     {
                         color = cor;   
@@ -31,8 +34,12 @@
                     return color;
                 }
             }
+                return _caneta;
+        
+            })(window);
             
-            var caneta1 = new Caneta(3.0, 'blue');
+            
+            
             
             
             
