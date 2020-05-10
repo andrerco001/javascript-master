@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+            <h1>Curso de Javascript - Objetos Customizáveis</h1>
+    
+                    
+            
+    
+        <script>
+            
+            function Caneta(preco, cor)
+            {
+                var color = cor || 'black';
+                
+                this.preco = preco || 1;
+                
+                this.mudarCor = function(cor)
+                {
+                    if(cor != 'red' && cor != 'black')
+                    {
+                        color = cor;   
+                    }
+                }
+                
+                this.pegaCor = function()
+                {
+                    return color;
+                }
+            }
+            
+            var caneta1 = new Caneta(3.0, 'blue');
+            
+            
+            
+            
+                        
+                   
+        </script>
+        
+    </body>
+</html>
