@@ -27,6 +27,17 @@
                </div>
                 
             </div>
+            
+            <div class="container">
+               <h1>delegacao de eventos</h1>
+               <ul>
+                   <li>lista 1</li>
+                   <li>lista 2</li>
+                   <li>lista 3</li>
+               </ul>
+                
+                
+            </div>
     
         <script>
             
@@ -68,6 +79,33 @@
                 // console.log(this);
             }, false);
             
+            // Delegacao de eventos
+            var $ul = document.querySelector('ul');
+            var $lis = document.querySelectorAll('li');
+            
+            $lis[0].addEventListener('click', function(e){
+                console.log('click na li');
+            });
+            
+            
+            
+//            var x = 0 ;
+//            while($lis[x]){
+//                $lis[x].addEventListener('click', function(e){
+//                    e.stopPropagation();
+//                    console.log('clicou nas lis');
+//                    
+//                });
+//                x++;
+//            }
+
+            $ul.addEventListener('click', function(e){
+                e.stopPropagation();
+                console.log(this);
+                console.log(e.target);
+                console.log(e.currentTarget);
+                
+            })
             
             
             
