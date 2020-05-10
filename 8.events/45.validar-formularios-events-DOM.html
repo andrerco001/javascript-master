@@ -3,18 +3,24 @@
 	<head>
 		<title>Curso Javascript Completo 2018</title>
         <meta charset="utf-8">
+        <style>
+            
+            body{
+                
+            }
+        
+        </style>
     </head>
     <body>
             <div>
                <h1>Curso de Javascript - Events - DOM - validacao de formularios</h1>
                 
-                <form action="#">
+                <form action="#" method="POST">
                    <label for="txtUser">Usuario</label>
                    <input type="text" id="txtUser" name="user"> <br>
                    <label for="txtPass">Password</label>
                    <input type="text" id="txtPass" name="password"> <br>
-                    <button type="button" id="btn">Logar</button> <br>
-                    <input type="submit">  
+                    <button type="submit" id="btn">Logar</button> <br>
                     
                 </form>
                 
@@ -26,14 +32,16 @@
             
             (function(){
                 'use strict';
+                var $form = document.querySelector('form');
                 var $txtUser = document.getElementById('txtUser');
                 var $txtPass = document.getElementById('txtPass');
                 var $btn = document.getElementById('btn');
                 
-                $btn.addEventListener('click', function(){
+                $form.addEventListener('submit', function(e){
                     
                     if(!$txtUser.value || !$txtPass.value){
                         alert("Preencha todos os campos!");
+                        e.preventDefault();
                     } else {
                         alert('Clicou no botao e os campos foram preenchidos corretamnte. Login...');
                     }
