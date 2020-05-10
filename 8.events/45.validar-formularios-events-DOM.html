@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+            <div>
+               <h1>Curso de Javascript - Events - DOM - validacao de formularios</h1>
+                
+                <form action="#">
+                   <label for="txtUser">Usuario</label>
+                   <input type="text" id="txtUser" name="user"> <br>
+                   <label for="txtPass">Password</label>
+                   <input type="text" id="txtPass" name="password"> <br>
+                    <button type="button" id="btn">Logar</button> <br>
+                    <input type="submit">  
+                    
+                </form>
+                
+            </div>
+            
+           
+    
+        <script>
+            
+            (function(){
+                'use strict';
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+                
+                $btn.addEventListener('click', function(){
+                    
+                    if(!$txtUser.value || !$txtPass.value){
+                        alert("Preencha todos os campos!");
+                    } else {
+                        alert('Clicou no botao e os campos foram preenchidos corretamnte. Login...');
+                    }
+                });
+                
+                
+            })();
+            
+            
+            
+            
+                   
+        </script>
+        
+    </body>
+</html>
