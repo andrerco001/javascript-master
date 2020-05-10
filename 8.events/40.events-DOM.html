@@ -10,21 +10,34 @@
             <p>Lorem ipsum lorem ipsum lorem ipsum</p>
             
             <button id="btn1" onclick="clicar()">botao 1</button>
-            
+            <br/>
             <button id="btn2">botao 2</button>
-            
+            <br/>
+            <button id="btn3">botao 3</button>
+            <br/>
     
         <script>
             
             var btn2 = document.getElementById('btn2');
+            var btn3 = document.getElementById('btn3');
             
             btn2.onclick = clicar;
             
             function clicar(){
-                alert('clicou');
+                alert('clicou com onclick level 0');
             }
             
-                      
+            
+            btn3.addEventListener("click", function(){
+                alert('Clicou com DOM level 2 usando addEventListener');
+            });
+            
+            btn3.addEventListener("click", function(){
+                alert('Clicou com DOM level 2 usando addEventListener em outro evento');
+            });
+            
+            
+                   
         </script>
         
     </body>
