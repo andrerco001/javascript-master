@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso de Javascript completo Daniel Morales</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Curso Completo de Javascript - DOM</h1>
+
+		<input type="text" id="txtNome" value="digite seu nome">
+
+		<script>
+
+			var $txt = document.querySelector('#txtNome');
+
+			var nome = 'Andre';
+			var sobrenome = 'Oliveira';
+
+			document.querySelector('#txtNome').value = nome + " " + sobrenome;
+
+			document.querySelector('#txtNome').disabled = true;
+
+		</script>
+
+	</body>
+</html>

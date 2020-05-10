@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso de Javascript completo Daniel Morales</title>
+	<meta charset="utf-8">
+
+	<script>
+
+		(function(){
+			function calularIMC(peso, altura, callback){
+				var imc = peso / (altura * altura);
+
+				if(callback && typeof callback === 'function'){
+					return callback(imc);
+				}
+
+				console.log('Nao passou callback');
+				return imc;
+			}
+
+			function classificaIMC(imc){
+
+				if(imc < 16.9)
+				{
+					return 'Muito abaixo do peso';
+				} else if(imc < 18.4)
+				{
+					return 'abaixo do peso';
+				} else if(imc < 29.9)
+				{
+					return 'acima do peso';
+				} else if(imc < 34.9)
+				{
+					return 'Obseidade 1';
+				} else if(imc < 40)
+				{
+					return 'Obseidade 2';
+				} else 
+				{
+					return 'Obseidade 3';
+				}
+			}
+
+			var peso = 92;
+			var altura = 1.84;
+
+			var imc = calularIMC(peso, altura, classificaIMC);
+			
+			console.log('Clasificação IMC: ', imc);
+		})();
+		
+	</script>
+
+</head>
+<body>
+	<h1>Curso Completo de Javascript</h1>
+
+</body>
+</html>

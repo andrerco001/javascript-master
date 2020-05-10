@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso de Javascript completo Daniel Morales</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Curso Completo de Javascript - DOM</h1>
+
+		<input type="text" name="nome" id="txtNome" value="digite seu nome">
+		<button onclick="escreve()">Clicar</button>
+		<div id="msg"></div>
+
+		<script>
+
+			var txtNome2;
+
+			txtNome2 = document.querySelector('#txtNome');
+			
+			function escreve(){
+
+				var nome = txtNome2.value;
+
+				if(nome !== 'digite seu nome'){
+					document.querySelector('#msg').innerHTML = `Sr. <strong> ${nome} </strong>, seja bem-vindo.`;
+				} else {
+
+					document.querySelector('#msg').innerHTML = `Por favor, insira um nome válido!`;
+				}
+			} 
+
+		</script>
+
+	</body>
+</html>

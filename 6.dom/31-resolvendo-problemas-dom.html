@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Curso de Javascript</h1>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        
+        </div>
+        
+    
+        <script>
+            
+            (function(){
+                'use strict';
+                var paragrafos = document.querySelectorAll('p');
+                
+                var x = 0;
+                while(paragrafos[x]){
+                    
+                    paragrafos[x].textContent = x + " - Este site foi hackeado por Fulano de Tal";
+                    x++;
+                }
+                
+            })();
+              
+        </script>
+        
+    </body>
+</html>
