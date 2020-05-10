@@ -5,42 +5,26 @@
         <meta charset="utf-8">
     </head>
     <body>
-            <h1>Curso de Javascript - Objetos - Exercice</h1>
-    
-                    
+            <h1>Curso de Javascript - Events - DOM</h1>
+            
+            <p>Lorem ipsum lorem ipsum lorem ipsum</p>
+            
+            <button id="btn1" onclick="clicar()">botao 1</button>
+            
+            <button id="btn2">botao 2</button>
             
     
         <script>
             
-            var person1 = {
-                firstName:'Andre',
-                lastName:'Oliveira',
-            };
+            var btn2 = document.getElementById('btn2');
             
-              var person2 = {
-                firstName:'Kallyne',
-                lastName:'Oliveira',
-            };
+            btn2.onclick = clicar;
             
-              var person3 = {
-                firstName:'Lilys',
-                lastName:'Oliveira',
-            };
-            
-            var arr = [
-                person1, 
-                person2, 
-                person3
-            ];
-            
-            var x = 0;
-            while(arr[x]){
-                
-                console.log(arr[x].firstName + ' ' + arr[x].lastName);
-                
-                x++;
+            function clicar(){
+                alert('clicou');
             }
-                 
+            
+                      
         </script>
         
     </body>
