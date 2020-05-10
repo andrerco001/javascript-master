@@ -52,20 +52,20 @@
             var $d1 = document.querySelector('#d1');
             var $d1Span = document.querySelector('#d1 span');
             
-            $d1.addEventListener('click', function(){
+            $d1.addEventListener('click', function(e){
                 console.log('click no $d1');
+                e.stopPropagation();
             }, false);
             
             $d1Span.addEventListener('click', function(){
                 console.log('click no $d1Span');
             }, false);
             
-            document.addEventListener('click', function(){
-                console.log('click on document');    
-            }, false);
-            
-            $d1.addEventListener('click', function(){
-                console.log('click on document');    
+            document.addEventListener('click', function(e){
+                console.log('click no document');  
+                // console.log(evt.currentTarget);
+                // console.log(evt.target);
+                // console.log(this);
             }, false);
             
             
