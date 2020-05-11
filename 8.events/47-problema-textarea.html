@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Problema textarea</h1>
+           
+           <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+           <br>
+           <div id="restaContainer" style="display: none">Restam <span id="resta" display></span> caracteres.</div>
+            
+            
+        
+        <script>
+            
+            (function(){
+                'use strict';
+                
+                var $txtMsg = document.querySelector('#msg');
+                var $restaContainer = document.getElementById('restaContainer');
+                var $resta = document.querySelector('#resta');
+                
+                var maxima = $txtMsg.maxLength;
+                
+                $restaContainer.style.display = 'block';
+                
+                $resta.textContent = maxima;
+                
+                $txtMsg.addEventListener('input', checkLength);
+                
+                function checkLength(e){
+                    
+                    var numeroLetrasDigitadas = this.value.length;
+                    
+                    $resta.textContent = maxima - numeroLetrasDigitadas;
+                   
+                }
+                
+            })();
+            
+            
+                   
+        </script>
+        
+    </body>
+</html>
