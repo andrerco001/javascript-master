@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+            
+            .done{
+                text-decoration: line-through;
+                color: red;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Problema - Lista de tarefas versao 4</h1>
+           
+           <input type="text" id="txtTask"><br>
+           <button id="btn">Cadastrar tarefa</button>
+           
+           <ul>
+               <li>Estudar Javascript - DOM</li>
+               <li>Estudar eventos</li>
+               <li>Jogar video-game</li>
+           </ul>
+               
+        <script>
+            
+            (function(){
+                'use strict';
+                
+                var $txtTask = document.querySelector('#txtTask');
+                var $btn = document.querySelector('#btn')
+                var $ul = document.querySelector('ul');
+                var $lis = $ul.querySelectorAll('li');
+                
+                $btn.addEventListener('click', addTask);
+                $txtTask.addEventListener('keyup', function(e){
+                    if(e.keyCode === 13){
+                        addTask();
+                    }
+                });
+                
+                for(var i = 0; i < $lis.length; i++){
+                    addEvent($lis[i]);
+                }
+                
+                function toggleDone(){
+                    this.classList.toggle('done');
+                    
+                }
+                
+                function addTask(){
+                    
+                    var li = document.createElement('li');
+                    
+                    var text = document.createTextNode($txtTask.value);
+                    
+                    li.appendChild(text);
+                    
+                    $ul.appendChild(li);
+                    
+                    $txtTask.value = '';
+                    $txtTask.focus();
+                    
+                    addEvent(li);
+                }
+                
+                function addEvent(li){
+                    li.addEventListener('click', toggleDone);
+                }
+         
+            })();
+              
+        </script>
+        
+    </body>
+</html>
