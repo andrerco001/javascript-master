@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Dates - temporizador</h1>
+           
+     
+        <script>
+            
+            var n = 0;
+            
+            function somaUm(){
+                console.log('n', ++n);
+                
+                if(n > 10){
+                    clearInterval(intervalo);
+                }
+            }
+            
+            var timeout = setTimeout(somaUm, 1000);
+            alert(timeout);
+            
+            var intervalo = setInterval(somaUm, 1000);
+            console.log(intervalo);
+            
+            var str = '';
+            var timeOutTeste = setTimeout(function(){
+                for(var i = 0; i < 100000; i++){
+                    str =+ "i: " + i + " -- ";
+                }
+                
+            }, 3000);
+            
+        </script>
+        
+    </body>
+</html>
