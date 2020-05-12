@@ -31,18 +31,26 @@
                 
                 var maxima = $txtMsg.maxLength;
                 
-                $restaContainer.style.display = 'block';
+                function showContainerLeft(){
+                    $restaContainer.style.display = 'block';
+                }
                 
-                $resta.textContent = maxima;
+                showContainerLeft();
+                
+                showCaractersLeft(maxima);
                 
                 $txtMsg.addEventListener('input', checkLength);
                 
                 function checkLength(e){
                     
                     var numeroLetrasDigitadas = this.value.length;
-                    
-                    $resta.textContent = maxima - numeroLetrasDigitadas;
+                    var caracteresRestantes = parseInt(maxima - numeroLetrasDigitadas);
+                    showCaractersLeft(caracteresRestantes);
                    
+                }
+                
+                function showCaractersLeft(n){
+                    $resta.textContent = n;
                 }
                 
             })();
