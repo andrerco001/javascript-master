@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Strings</h1>
+           
+
+        <script>
+            
+            var nome = "Andre Ricardo Carvalho de Oliveira";
+            
+            var nomeFormatado = formatarNome(nome);
+            
+
+                
+                function formatarNome(nome){
+                    var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+                    
+                    if(posicaoUltimoEspaco <= 0){
+                        return nome;
+                    }
+                    
+                    var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+                    console.log('ultimoNome ', ultimoNome);
+                    console.log('posicaoUltimoEspaco ', posicaoUltimoEspaco);
+                    
+                    var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+                    
+                    return ultimoNome + ', ' + primeiroNome;   
+                }
+                
+                console.log(nomeFormatado);
+                
+        </script>
+        
+    </body>
+</html>
