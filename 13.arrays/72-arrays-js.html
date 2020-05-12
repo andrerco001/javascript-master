@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Arrays no JS</h1>
+           
+           
+        <script>
+            
+            var arr = ['a', 1, 2, 3, 4, 5, '7', 8, '9'];
+            
+            var soNumeros = arr.every(function(el){
+                return typeof el === 'number';
+            });
+            
+            console.log(soNumeros);
+            
+             var aoMenosUmNumero = arr.some(function(el){
+                return typeof el === 'number';
+            });
+            
+            console.log(aoMenosUmNumero);
+            
+            var numeros = arr.filter(function(el, i, arr){
+               return typeof el === 'number'; 
+            });
+            
+            console.log(numeros);
+            
+            // foreach
+            arr.forEach(function(el, i, arr){
+               console.log('el =', el, 'i =', i, 'i =', arr.toString()); 
+            });
+            
+            
+            console.log(arr.indexOf(8));
+            
+        
+        </script>
+    </body>
+</html>
