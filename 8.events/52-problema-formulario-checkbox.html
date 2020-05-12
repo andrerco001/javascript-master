@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            
+            body{
+                font-family: sans-serif;
+            }
+        
+        </style>
+    </head>
+    <body>
+           <h1>Curso completo de Javascript - Problema - envio de formulário - checkbox</h1>
+           
+           <form action="#">
+              
+              <textarea name="contrato" cols="50" rows="10" readonly>Contrato de serviços de informática.</textarea>
+              <br>
+              <label>
+                  <input id="chk" type="checkbox" checked> Li e aceito os termos desse contrato.
+              </label>
+              <br>
+              <input id="btn" type="submit" value="Continuar">
+              
+           </form>
+           
+        
+        <script>
+            
+            (function(){
+                'use strict';
+                var $btn = document.getElementById('btn');
+                var $chk = document.getElementById('chk');
+                
+                toggleBtn();
+                
+                $chk.addEventListener('change', function(){
+                    toggleBtn();
+                });
+                
+                function toggleBtn(){
+                    $btn.disabled = !$chk.checked;
+                }
+                                
+            })();
+              
+        </script>
+        
+    </body>
+</html>
